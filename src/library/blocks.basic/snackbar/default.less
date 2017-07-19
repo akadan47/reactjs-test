@@ -1,0 +1,19 @@
+.snackbar {
+  background: lighten(@color_black, 20%);
+  height: 54px;
+  line-height: 54px;
+  padding: 0 10px;
+  position: fixed;
+  bottom: -54px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  * {
+    color: @color_white;
+  }
+  &_open {
+    bottom: 0;
+  }
+}

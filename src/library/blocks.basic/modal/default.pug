@@ -1,0 +1,42 @@
+mixin modal(style, args)
+  - block_style = "modal"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {type: "default"}
+  - args.text = args.text ? args.text : ""
+
+  if args.type = "simple"
+    .modal-wrapper.modal-wrapper_hidden(id=args.id)
+      div(class=style)
+        .modal__header()
+          =args.title
+          span.modal__close
+            +icon('icon_close')
+        if block
+          block
+  else
+    .modal-wrapper.modal-wrapper_hidden(id=args.id)
+      div(class=style, type=args.type)
+        .modal__header()
+          =args.title
+          span.modal__close
+            +icon('icon_close')
+        if block
+          block
+
+mixin modal__content(style, args)
+  -block_style="modal__content"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+
+  div(class=style)
+    if block
+      block
+
+mixin modal__footer(style, args)
+  -block_style="modal__footer"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+
+  div(class=style)
+    if block
+      block

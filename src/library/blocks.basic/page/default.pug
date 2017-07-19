@@ -1,0 +1,7 @@
+mixin page(style, args)
+  -block_style="page"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  div(class=style)
+    if block
+      block

@@ -1,0 +1,29 @@
+.mark {
+  position: relative;
+  padding-left: 13px;
+  color: @color_default;
+  line-height: 1.33;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: @color_default;
+  }
+
+  &_success {
+    color: @color_success;
+
+    &:before {
+      background-color: @color_success;
+    }
+
+  }
+
+}

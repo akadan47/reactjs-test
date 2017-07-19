@@ -1,0 +1,24 @@
+mixin range(style, args)
+  - block_style = "range"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.min = args.min ? args.min : 0
+  - args.max = args.max ? args.max : 500000
+  - args.from = args.from ? args.from : 5000
+  - args.to = args.to ? args.to : 300000
+  div(class=style)
+    +form-field('range__field')
+      +form-field()
+        +text('text_size_medium')
+          | От
+      +input('input input_format_wide range__min', {value: args.from, placeholder: args.min})
+      a(href="#").range__field-remove
+        +icon('icon_remove-small')
+    +form-field('range__field')
+      +form-field()
+        +text('text_size_medium')
+          | До
+      +input('input input_format_wide range__max', {value: args.to, placeholder: args.max})
+      a(href="#").range__field-remove
+        +icon('icon_remove-small')
+    .range__slider

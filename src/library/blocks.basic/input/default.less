@@ -1,0 +1,74 @@
+.input {
+  background: none;
+  border: none;
+  font-size: 16px;
+  // line-height: 1;
+  padding: 8px 0 5px;
+  margin-bottom: 1px;
+  color: @color_black;
+  border-bottom: 1px solid @color_default;
+  position: relative;
+  z-index: 2;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid @color_primary;
+    margin-bottom: 0;
+  }
+  &_format_wide {
+    width: 100%;
+  }
+  &_text {
+    & + .input__placeholder {
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+    &.active + .input__placeholder {
+      display: none;
+    }
+  }
+  &_animate-top {
+    & + .input__placeholder {
+      color: #b0b8bf;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      transition: all .2s;
+    }
+    &:focus + .input__placeholder,
+    &.active + .input__placeholder {
+      top: -10px;
+      font-size: 13px;
+      line-height: 13px;
+      opacity: 1;
+    }
+    &.input_icon-left {
+      & + .input__placeholder {
+        left: 55px;
+      }
+    }
+  }
+  &_icon-right {
+    width: 100%;
+    padding-right: 55px;
+    & + .icon,
+    & + * + .icon {
+      position: absolute;
+      right: 0px;
+      bottom: 10px;
+    }
+  }
+  &_icon-left {
+    width: 100%;
+    padding-left: 55px;
+    & + .icon,
+    & + * + .icon {
+      position: absolute;
+      left: 0px;
+      bottom: 10px;
+    }
+  }
+}

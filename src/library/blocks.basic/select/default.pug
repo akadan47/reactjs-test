@@ -1,0 +1,9 @@
+mixin select(style, args)
+  - block_style = "select_default"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.name = args.name ? args.name : 'select'
+  .select
+    select(name=args.name, class=style)
+      each option, index in args.options
+        option(value=index)= option

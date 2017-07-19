@@ -1,0 +1,10 @@
+mixin checkbox(style, args)
+  - block_style = "checkbox"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  label(class=style)
+    input(type="checkbox", name=args.name, checked=args.checked)
+    span.checkbox_wrap
+      =args.title
+      if args.description
+        span.checkbox_description= args.description

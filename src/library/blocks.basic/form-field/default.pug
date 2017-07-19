@@ -1,0 +1,6 @@
+mixin form-field(style, args)
+  - block_style = "form-field"
+  - style = style ? block_style+" "+style : block_style
+  div(class=style)
+    if block
+      block

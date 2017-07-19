@@ -1,0 +1,7 @@
+mixin mark(style, args)
+  -block_style="mark"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  span(class=style)
+    if block
+      block

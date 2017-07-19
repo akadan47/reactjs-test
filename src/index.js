@@ -4,6 +4,6 @@ import template from './app.pug'
 
 
 ReactDOM.render(
-  template.call(this, {'logo': '/logo.png'}),
+  template.call(this),
   document.getElementById('root')
 );

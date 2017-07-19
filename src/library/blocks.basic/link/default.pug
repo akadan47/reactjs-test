@@ -1,0 +1,9 @@
+mixin link(style, args)
+  - block_style = "link"
+  - block_href = "#"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.href = args.href ? args.href : block_href
+  a(href=args.href, class=style, target=args.target)
+    if block
+      block

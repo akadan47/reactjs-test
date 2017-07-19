@@ -1,0 +1,81 @@
+.radio {
+  position: relative;
+  cursor: pointer;
+
+  &:first-child {
+
+     .radio__text {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+
+  }
+
+  &:last-child {
+
+      .radio__text{
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  &__text {
+    outline: none;
+    min-width: 140px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -6px;
+    background: @color_white;
+    height: 32px;
+    border: 1px solid @color_primary;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 32px;
+    text-align: center;
+    color: @color_primary;
+    font-size: 14px;
+  }
+  &__input:checked + &__text {
+    color: @color_white;
+    background: @color_primary;
+  }
+  &.button {
+    border-radius: 0;
+    background: @color_white;
+    color:@color_primary;
+    border: 1px solid @color_primary;
+    font-size: 14px;
+    margin-right: -6px;
+    &:first-of-type {
+      border-radius: 2px 0 0 2px;
+    }
+    &:last-of-type {
+      border-radius: 0 2px 2px 0;
+    }
+    &.active {
+      background: @color_primary;
+      color:@color_white;
+    }
+    &_sm {
+      width: 120px;
+    }
+    &_medium {
+      width: 140px;
+    }
+    &_large {
+      width: 150px;
+    }
+    &:hover {
+
+    }
+  }
+}

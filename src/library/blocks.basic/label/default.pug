@@ -1,0 +1,7 @@
+mixin label(style, args)
+  -block_style="label"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  span(class=style)
+    if block
+      block

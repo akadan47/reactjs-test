@@ -1,0 +1,16 @@
+mixin form(style, args)
+  - block_style = "form"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.tag = args.tag ? args.tag : 'form'
+  - args.name = args.name ? args.name : '#'
+  - args.method = args.method ? args.method : 'GET'
+  - args.action = args.action ? args.action : '#'
+  if args.tag == 'div'
+    div(class=style)
+      if block
+        block
+  else
+    form(class=style, name=args.name, method=args.method, action=args.action)
+      if block
+        block

@@ -1,0 +1,7 @@
+mixin carousel(style, args)
+  -block_style="carousel"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  div(class=style, data-options=args)
+    if block
+      block

@@ -1,0 +1,15 @@
+mixin layout(style, args)
+  -block_style="layout"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  div(class=style)
+    if block
+      block
+
+mixin layout__col(style, args)
+  -block_style="layout__col"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  div(class=style)
+    if block
+      block

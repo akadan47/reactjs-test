@@ -1,0 +1,13 @@
+mixin radio(style, args)
+  - block_style = "radio"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  case args.type
+    when 'input'
+      label.radio
+        input(class=style, type="radio", name=args.name, value=args.val, tabindex=args.index, data-link=args.link).radio__input
+        span.radio__text
+          =args.text
+    when 'button'
+      +button(style, {type: 'button', name: args.name, link: args.link})
+        =args.text

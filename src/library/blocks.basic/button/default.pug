@@ -1,0 +1,30 @@
+mixin button(style, args)
+  - block_style = "button"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.link = args.link ? args.link : '#'
+  - args.type = args.type ? args.type : "button"
+  - args.text = args.text ? args.text : "Кнопка"
+
+  case args.type
+    when "input-button"
+      input(type="button", class=style, name=args.name, value=args.text, data-link=args.link)
+    when "input-submit"
+      input(type="submit", class=style, name=args.name, value=args.text, data-link=args.link)
+
+  if block
+    case args.type
+      when "link"
+        a(class=style, href="#", data-link=args.link)
+          block
+      when "button"
+        button(type="button", class=style, name=args.name, data-link=args.link, disabled=args.disabled)
+          block
+  else
+    case args.type
+      when "link"
+        a(class=style, href="#", data-link=args.link)
+          =args.text
+      when "button"
+        button(type="button", class=style, name=args.name, data-link=args.link)
+          =args.text

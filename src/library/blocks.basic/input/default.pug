@@ -1,0 +1,17 @@
+mixin input(style, args)
+  - block_style = "input"
+  - block_type = "text"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.type = args.type ? args.type : block_type
+  if style.indexOf('input_animate-top') > -1
+    input(class=style, type=args.type)
+    span.input__placeholder
+      =args.placeholder
+  else if style.indexOf('input_text') > -1
+    if block
+      input(class=style, type=args.type)
+      span.input__placeholder
+        block
+  else
+    input(class=style, type=args.type, value=args.value, placeholder=args.placeholder)

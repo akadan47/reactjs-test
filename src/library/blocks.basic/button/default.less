@@ -1,0 +1,311 @@
+.button {
+  background: none;
+  border: none;
+  border-radius: 2px;
+  background-color: @color_primary;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  color:@color_white;
+  text-decoration: none;
+  outline: none;
+  padding: 0 13px;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  height: 36px;
+  // Elements
+  &__text{
+
+  }
+
+  &_no-radius {
+    border-radius: 0;
+  }
+  
+  // Modifiers
+  &_size_xsmall {
+    padding: 0 5px;
+    font-weight: normal;
+    line-height: 28px;
+    height: 28px;
+  }
+
+  &_size_small {
+    padding: 1px 15px 0;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: normal;
+    height: 32px;
+  }
+
+  &_size_medium {
+    padding: 1px 25px 0;
+    line-height: 42px;
+    height: 42px;
+  }
+
+  &_size_large {
+    padding: 0 25px;
+    line-height: 50px;
+    height: 50px;
+  }
+
+  &_size_xlarge {
+    padding: 0 25px;
+    font-size: 18px;
+    line-height: 60px;
+    height: 60px;
+  }
+
+  &_format_wide {
+    width: 100%;
+    display: block;
+  }
+
+  &_text_directions-left {
+    text-align: left;
+  }
+
+  &_success {
+    background: @color_success;
+  }
+
+  &_error {
+    background: @color_danger;
+  }
+
+  &_disable, &:disabled {
+    background: #eaeaea;
+    color:#a8a8a8;
+  }
+
+  &:hover, &:active {
+
+  }
+  
+  &_catalog {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 15px;
+    background: #e8b23b;
+    background: -webkit-linear-gradient(#e8b23b 0%, #f76b1c 40%, #f76b1c 70%, #f76b1c 100%);
+    background: -o-linear-gradient(#e8b23b 0%, #f76b1c 40%, #f76b1c 70%, #f76b1c 100%);
+    background: linear-gradient(#e8b23b 0%, #f76b1c 40%, #f76b1c 70%, #f76b1c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8b23b', endColorstr='#f76b1c',GradientType=0 );
+    color: @color_white;
+    font-size: 20px;
+    line-height: 55px;
+  
+    .icon {
+      vertical-align: super;
+      margin-right: 10px;
+    }
+  
+  }
+
+  &_delivery-pickup,
+  &_actions {
+    display: block;
+    width: 100%;
+    background: @color_white;
+    font-size: 18px;
+    padding: 0 10px 0 15px;
+    font-weight: normal;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &_actions {
+    color: #d0021b;
+  }
+
+  &_delivery-pickup {
+    margin: 10px 0 20px;
+    color: @color_black;
+  }
+
+}
+
+.offer {
+  &_action-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid 0.5px rgba(0, 125, 212, 0.15);
+    font-size: 14px;
+    font-weight: normal;
+    background: @color_white;
+    color: @color_primary;
+    padding: 0 10px 0 0;
+    .icon {
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.paginate {
+  &_button {
+    padding: 0;
+    background-image: -webkit-linear-gradient(#f2f2f2, #e1e1e1);
+    background-image: -o-linear-gradient(#f2f2f2, #e1e1e1);
+    background-image: linear-gradient(#f2f2f2, #e1e1e1);
+    height: 40px;
+    line-height: 44px;
+    border-radius: 0;
+    &_selected {
+      background: @color_primary;
+      box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.5);
+      &.paginate {
+        &_number {
+          color:@color_white;
+        }
+      }
+    }
+    .icon {
+      position: relative;
+      top: -6px;
+    }
+  }
+  &_number {
+    font-family: 'Circe';
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    color: @color_primary;
+  }
+
+  &_border {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+  }
+
+}
+
+.to-desktop {
+  background: @color_white;
+  color: @color_black;
+
+  .icon {
+    vertical-align: text-top;
+    margin-right: 10px;
+  }
+
+}
+
+.social {
+  &_button {
+    width: 35px;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 0;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    .icon {
+      margin: 0;
+    }
+    &_vk {
+      background: #44678d;
+    }
+    &_facebook {
+      background: #3d5a98;
+    }
+    &_odnoklassniki {
+      background: #f58220;
+    }
+    &_twitter {
+      background: #50abf1;
+    }
+    &_instagramm {
+      background: #507fa7;
+    }
+    &_youtube {
+      background: #e62117;
+    }
+  }
+}
+
+.application {
+  &_button {
+    padding: 0;
+    height: auto;
+    background: none;
+    .icon {
+      margin: 0;
+    }
+  }
+}
+
+.filter {
+  &_button {
+    background: @color_white;
+    color: @color_primary;
+    font-weight: normal;
+    padding: 0 20px;
+  }
+}
+
+.offer {
+  &_buy-button {
+    height: 34px;
+    line-height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 21px;
+    background-image: -webkit-linear-gradient(#fbda61, #f76b1c);
+    background-image: -o-linear-gradient(#fbda61, #f76b1c);
+    background-image: linear-gradient(#fbda61, #f76b1c);
+    .icon {
+      position: relative;
+      vertical-align: top;
+      border-left: 1px solid fade(@color_white, 30%);
+      height: 100%;
+      padding: 0 12px 0 7px;
+      line-height: 40px;
+      margin: 0 0 0 10px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      &:before {
+        line-height: 1;
+        position: relative;
+        top: -3px;
+      }
+      &:after {
+        height: 100%;
+      }
+    }
+    &_active {
+      background: @color_danger;
+      .icon {
+        &:before {
+          margin-right: 9px;
+        }
+      }
+    }
+    &.button {
+      &_size {
+        &_xsmall {
+          height: 28px;
+          line-height: 32px;
+          font-size: 16px;
+          .icon {
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+  &_out-stock {
+    border: solid 1px #c4c4c4;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    color: #888888;
+    font-weight: normal;
+  }
+}

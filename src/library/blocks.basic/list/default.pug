@@ -1,0 +1,15 @@
+mixin list(style, args)
+  -block_style="list"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  ul(class=style)
+    if block
+      block
+
+mixin list__item(style, args)
+  -block_style="list__item"
+  -style=style ? block_style+" "+style : block_style
+  -args=args ? args : {}
+  li(class=style)
+    if block
+      block

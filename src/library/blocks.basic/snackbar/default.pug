@@ -1,0 +1,8 @@
+mixin snackbar(style, args)
+  - block_style = "snackbar"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  - args.timeout = args.timeout ? args.timeout : 1500
+  div(class=style, id=args.id, data-timeout=args.timeout)
+    if block
+        block

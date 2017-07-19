@@ -2,11 +2,10 @@ import React from 'react';
 
 export default function () {
   return (
-    <div className="App">
-      <div className="App-header">
-        <h2>Welcome to Reactor</h2>
-      </div>
-    </div>
+    <button className="button" data-link="#" type="button">
+      <span className="icon icon_vk" />
+      Кнопка с иконкой
+    </button>
   );
 }
 

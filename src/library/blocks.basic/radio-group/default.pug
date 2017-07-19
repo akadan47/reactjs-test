@@ -1,0 +1,7 @@
+mixin radio-group(style, args)
+  - block_style = "radio-group"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  div(class=style)
+    if block
+      block

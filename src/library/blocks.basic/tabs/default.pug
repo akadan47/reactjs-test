@@ -1,0 +1,15 @@
+mixin tabs(style, args)
+  - block_style = "tabs"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  div(class=style)
+    if block
+      block
+
+mixin tab__item(style, args)
+  - block_style = "tab__item"
+  - style = style ? block_style+" "+style : block_style
+  - args = args ? args : {}
+  div(class=style, id=args.id)
+    if block
+      block
